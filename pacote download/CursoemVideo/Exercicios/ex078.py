@@ -1,22 +1,19 @@
 valores = []
 maior = 0
-
+menor = 0
 
 for contador in range(0,5) :
-  numero = int(input(f'Digite um valor inteiro para a posição {contador}: '))
-  valores.append(numero)
+  valores.append(int(input(f'Digite um valor inteiro para a posição {contador}: ')))
 
   if contador == 0:
-    maior = numero
-    menor = numero
-
+    maior =  menor = valores[contador]
   else:  
-    if numero > maior:
-      maior = numero
-    if numero< menor:
-      menor = numero
-  contador = contador + 1
+    if valores[contador] > maior:
+      maior = valores[contador]
+    if valores[contador]< menor:
+      menor = valores[contador]
 
+print('=-'*30)
 print(f'Números digitados: {valores}')
 print(maior, menor)
 
